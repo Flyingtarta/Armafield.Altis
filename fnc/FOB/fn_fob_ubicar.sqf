@@ -18,13 +18,16 @@ _ubicar = player addAction
 		private _type = typeof _fob;
 		detach _Fob;
 		deletevehicle _Fob;
+
+
 		/*
 		_fob = createVehicle [_type,_pos,[],0,"CAN_COLLIDE"];
 		_fob setdir _dir;
 		_fob setvectorup (surfaceNormal (getpos _fob));
 		*/
-		[_type,_pos,_dir] call clv_fnc_fob_construccion; 
+		[_caller,_type,_pos,_dir] call clv_fnc_fob_contruccion;
 		[_fob] call clv_fnc_init_fob;
+
 	},
 	nil,		// arguments
 	1.5,		// priority

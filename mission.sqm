@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={7852.7329,273.23688,16639.713};
-		dir[]={0.33108053,-0.64654684,0.68731081};
-		up[]={0.2805891,0.76286918,0.58249319};
-		aside[]={0.90093654,-1.6129343e-007,-0.43398401};
+		dir[]={0.33107483,-0.64653605,0.68729949};
+		up[]={0.28058261,0.76288348,0.58247942};
+		aside[]={0.90092337,-1.4901161e-008,-0.43397829};
 	};
 };
 binarizationWanted=0;
@@ -30,8 +30,7 @@ addons[]=
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Characters_F",
 	"A3_Soft_F_Gamma_Truck_01",
-	"A3_Soft_F_Exp_Truck_01",
-	"A3_Structures_F_Mil_Fortification"
+	"A3_Soft_F_Exp_Truck_01"
 };
 class AddonsMetaData
 {
@@ -102,7 +101,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=8;
+		items=7;
 		class Item0
 		{
 			dataType="Marker";
@@ -217,22 +216,6 @@ class Mission
 			};
 			id=15;
 			type="B_Truck_01_Repair_F";
-		};
-		class Item7
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7870.2012,254.60048,16673.064};
-				angles[]={0.013332055,3.6691203,6.1663857};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=16;
-			type="Land_HBarrierTower_F";
 		};
 	};
 };
