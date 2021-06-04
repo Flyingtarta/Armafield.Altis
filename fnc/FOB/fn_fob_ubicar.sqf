@@ -2,7 +2,8 @@
 _modelo = "Land_HBarrierTower_F";//"Land_BagBunker_Tower_F";
 private _pos = getpos player getpos [getdir player,10];
 Fob = _modelo createVehiclelocal _pos;
-Fob attachto [player,[0,10,0]];
+private _fob = fob;
+_Fob attachto [player,[0,10,0]];
 
 
 //addaction para ubicar el fob
@@ -64,10 +65,28 @@ _cancelar = player addAction
 	""			// memoryPoint
 ];
 
-//bounding box
-_bb = (2 boundingBox Fob) #1 #2;
+girar = {
+	_tecla = _this select 1;
+	if (_tecla isequalto 16) then {
+		Fob setdir ((getdir fob) + 1);
+		true
+	}else{
+		if (_tecla isequalto 18) then {
+			Fob setdir ((getdir fob) -1);
+			true
+		};
+	};
+};
+_rotacion = findDisplay 46 displayAddEventHandler ["KeyDown", "_this call girar"];
 
-while {(attachedto Fob) isnotequalto objNull} do {
+
+
+
+
+//bounding box
+_bb = (2 boundingBox _Fob) #1 #2;
+
+while {(attachedto _Fob) isnotequalto objNull} do {
 	_fob = fob;
 	_pos = (getpos player) getpos [10,getdir player];
 	if !([_fob] call clv_fnc_canfob ) then {
@@ -86,6 +105,8 @@ while {(attachedto Fob) isnotequalto objNull} do {
 };
 
 //borramos el addaction de antes
+
+findDisplay 46 displayRemoveEventHandler ["keyDown",_rotacion];
 
 player removeAction _ubicar;
 player removeAction _cancelar;
