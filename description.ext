@@ -1,0 +1,5 @@
+class CfgFunctions {
+	#include "fnc\cfgfunctions.hpp"
+};
+
+RECOMPILE = 1; 

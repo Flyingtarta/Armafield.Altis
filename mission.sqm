@@ -1,0 +1,238 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1025;
+	class ItemIDProvider
+	{
+		nextID=17;
+	};
+	class MarkerIDProvider
+	{
+		nextID=2;
+	};
+	class Camera
+	{
+		pos[]={7852.7329,273.23688,16639.713};
+		dir[]={0.33108053,-0.64654684,0.68731081};
+		up[]={0.2805891,0.76286918,0.58249319};
+		aside[]={0.90093654,-1.6129343e-007,-0.43398401};
+	};
+};
+binarizationWanted=0;
+sourceName="Tarta_KOTH";
+addons[]=
+{
+	"A3_Ui_F",
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Characters_F",
+	"A3_Soft_F_Gamma_Truck_01",
+	"A3_Soft_F_Exp_Truck_01",
+	"A3_Structures_F_Mil_Fortification"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=5;
+		class Item0
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Soft_F_Gamma";
+			name="Arma 3 - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=6187806;
+class ScenarioData
+{
+	author="FlyingTarta";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=5;
+		minute=-15;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=8;
+		class Item0
+		{
+			dataType="Marker";
+			position[]={9132.4316,196.304,19269.656};
+			name="marker_0";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=2000;
+			b=2000;
+			drawBorder=1;
+			id=0;
+			atlOffset=-72.268356;
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={9458.7178,57.833984,20233.848};
+			name="marker_1";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorYellow";
+			a=199.08545;
+			b=199.08545;
+			id=1;
+			atlOffset=-69.993416;
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={10310.449,57.604294,19076.17};
+			name="marker_2";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorYellow";
+			a=199.08545;
+			b=199.08545;
+			id=2;
+			atlOffset=-69.993416;
+		};
+		class Item3
+		{
+			dataType="Marker";
+			position[]={14411.553,16.439131,16809.105};
+			name="marker_3";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorYellow";
+			a=199.08545;
+			b=199.08545;
+			id=3;
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14651.023,17.91,16781.158};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=9;
+			type="Land_HelipadCircle_F";
+		};
+		class Item5
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7860.9922,252.60779,16664.707};
+						angles[]={0,0.31971684,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=14;
+					type="B_Soldier_A_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=13;
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7853.6826,255.20378,16664.322};
+				angles[]={6.2192731,0.66556382,6.247201};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this setvariable [""materiales"",10000,true];";
+			};
+			id=15;
+			type="B_Truck_01_Repair_F";
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7870.2012,254.60048,16673.064};
+				angles[]={0.013332055,3.6691203,6.1663857};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=16;
+			type="Land_HBarrierTower_F";
+		};
+	};
+};
