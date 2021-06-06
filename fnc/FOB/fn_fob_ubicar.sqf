@@ -17,7 +17,7 @@ _ubicar = player addAction
 		private _pos = getpos _fob;
 		_pos set [2,0];
 		private _type = typeof _fob;
-		detach _Fob;
+		//detach _Fob;
 		deletevehicle _Fob;
 
 
@@ -31,7 +31,7 @@ _ubicar = player addAction
 
 	},
 	nil,		// arguments
-	1.5,		// priority
+	100,		// priority
 	true,		// showWindow
 	true,		// hideOnUse
 	"",			// shortcut
@@ -48,13 +48,13 @@ _cancelar = player addAction
 	"cancelar",	// title
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
-		private _dir =
+		//private _dir =
 
-		detach Fob;
+		//detach Fob;
 		deletevehicle Fob;
 	},
 	nil,		// arguments
-	1.5,		// priority
+	0,		// priority
 	true,		// showWindow
 	true,		// hideOnUse
 	"",			// shortcut
@@ -67,22 +67,19 @@ _cancelar = player addAction
 
 girar = {
 	_tecla = _this select 1;
-	if (_tecla isequalto 16) then {
-		Fob setdir ((getdir fob) + 1);
-		true
+	if (_tecla > 0) then {
+		Fob setdir ((getdir fob) + 0.01);
+		//systemchat str [getdir fob,(getdir fob) + 0.001];
+		false
 	}else{
-		if (_tecla isequalto 18) then {
-			Fob setdir ((getdir fob) -1);
-			true
-		};
+		Fob setdir ((getdir fob) - 0.01);
+		//systemchat str [getdir fob,(getdir fob) - 0.001];
+		false
 	};
 };
-_rotacion = findDisplay 46 displayAddEventHandler ["KeyDown", "_this call girar"];
 
-
-
-
-
+_rotacion = findDisplay 46 displayAddEventHandler ["MouseZchanged", "_this call girar"];
+systemchat str _rotacion;
 //bounding box
 _bb = (2 boundingBox _Fob) #1 #2;
 
@@ -90,7 +87,7 @@ while {(attachedto _Fob) isnotequalto objNull} do {
 	_fob = fob;
 	_pos = (getpos player) getpos [10,getdir player];
 	if !([_fob] call clv_fnc_canfob ) then {
-		detach Fob;
+		//detach Fob;
 		deletevehicle Fob;
 		hint "Te saliste del area de construccion";
 		break
@@ -105,8 +102,8 @@ while {(attachedto _Fob) isnotequalto objNull} do {
 };
 
 //borramos el addaction de antes
-
-findDisplay 46 displayRemoveEventHandler ["keyDown",_rotacion];
+(findDisplay 46) displayremoveEventHandler ["MouseZchanged",_rotacion];
+//findDisplay 46 displayRemoveEventHandler ["keyDown",_rotacion];
 
 player removeAction _ubicar;
 player removeAction _cancelar;
