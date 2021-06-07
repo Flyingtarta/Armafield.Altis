@@ -18,4 +18,4 @@
 		none
 */
 
-hint "hola soy un fob que habla";
+hint "Fob despegado";

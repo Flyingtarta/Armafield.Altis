@@ -1,3 +1,4 @@
+contruyendo = false;
 player addAction
 [
 	"Construir FOB",	// title
@@ -10,7 +11,7 @@ player addAction
 	true,		// showWindow
 	true,		// hideOnUse
 	"",			// shortcut
-	"[_this] call clv_fnc_canfob && attachedObjects _this isequalto []", 	// condition
+	"[_this] call clv_fnc_canbuild && attachedObjects _this isequalto []", 	// condition
 	50,			// radius
 	false,		// unconscious
 	"",			// selection

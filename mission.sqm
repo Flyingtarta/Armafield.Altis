@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1025;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=17;
+		nextID=22;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7869.4697,259.45822,16659.211};
-		dir[]={-0.65780741,-0.43739992,0.61316454};
-		up[]={-0.3199549,0.89926708,0.29824081};
-		aside[]={0.68184918,0,0.73149282};
+		pos[]={7880.6978,263.93329,16645.232};
+		dir[]={-0.57861573,-0.41834649,0.70013577};
+		up[]={-0.26650357,0.90828758,0.32247427};
+		aside[]={0.77083063,0,0.63704032};
 	};
 };
 binarizationWanted=0;
@@ -146,7 +146,7 @@ class Mission
 		class Item3
 		{
 			dataType="Marker";
-			position[]={14411.553,16.439131,16809.105};
+			position[]={8599.8359,146.71387,18304.982};
 			name="marker_3";
 			markerType="ELLIPSE";
 			type="ellipse";
@@ -154,6 +154,7 @@ class Mission
 			a=199.08545;
 			b=199.08545;
 			id=3;
+			atlOffset=-31.248215;
 		};
 		class Item4
 		{
