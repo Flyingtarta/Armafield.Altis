@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=5;
 	class ItemIDProvider
 	{
 		nextID=22;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7880.6978,263.93329,16645.232};
-		dir[]={-0.57861573,-0.41834649,0.70013577};
-		up[]={-0.26650357,0.90828758,0.32247427};
-		aside[]={0.77083063,0,0.63704032};
+		pos[]={7865.4927,259.4985,16648.48};
+		dir[]={-0.26953542,-0.39922825,0.87633753};
+		up[]={-0.11736484,0.91685146,0.38158703};
+		aside[]={0.95581162,-7.4505806e-009,0.29397929};
 	};
 };
 binarizationWanted=0;
@@ -183,23 +183,68 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7860.9922,252.60779,16664.707};
-						angles[]={0,0.31971684,0};
+						position[]={7860.9922,252.6078,16664.707};
+						angles[]={0,0.31970942,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="createDialog ""TartaMenu""" \n "";
 						isPlayer=1;
 					};
 					id=14;
 					type="B_Soldier_A_F";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
 			id=13;
+			atlOffset=1.5258789e-005;
 		};
 		class Item6
 		{

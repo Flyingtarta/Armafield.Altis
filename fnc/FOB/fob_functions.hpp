@@ -1,10 +1,10 @@
 class FOB
 {
 	file = "fnc\FOB";
-	class canbuild{};
-	class init_fob{};
+	class fob_canbuild{};
+	class fob_init{};
 	class fob_crearfob {};
 	class fob_contruccion {};
 	class fob_ubicar{};
-	class rotarobjeto {};
+	class fob_rotarobjeto {};
 };

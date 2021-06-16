@@ -2,4 +2,8 @@ class CfgFunctions {
 	#include "fnc\cfgfunctions.hpp"
 };
 
-RECOMPILE = 1; 
+RECOMPILE = 1;
+
+
+#include "gui\common.hpp"
+#include "gui\tartamenu.hpp"
