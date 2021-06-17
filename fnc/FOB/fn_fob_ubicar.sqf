@@ -79,7 +79,7 @@ _bb = (2 boundingBox _forti) #1 #2;
 while {(attachedto _forti) isnotequalto objNull} do {
 	_forti = forti;
 	_pos = (getpos player) getpos [10,getdir player];
-	if !([_forti] call clv_fnc_canbuild ) then {
+	if !([_forti] call clv_fnc_fob_canbuild ) then {
 		detach _forti;
 		deletevehicle _forti;
 		hint "Te saliste del area de construccion";
