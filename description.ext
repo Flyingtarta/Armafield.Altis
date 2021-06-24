@@ -4,6 +4,8 @@ class CfgFunctions {
 
 RECOMPILE = 1;
 
-
+//Interfaces
 #include "gui\common.hpp"
 #include "gui\tartamenu.hpp"
+#include "gui\tartamenu3.hpp"
+#include "gui\materiales_inmenu.hpp"

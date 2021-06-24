@@ -19,11 +19,8 @@ private _tecla = _this select 0;
 private _objeto = _this select 1;
 
 if (_tecla > 0) then {
-	_objeto setdir ((getdir _objeto) + 0.001);
-	//systemchat str [getdir _objeto,(getdir _objeto) + 0.001];
+	_objeto setdir (( (getdir _objeto) - (getdir (attachedTo _objeto))) + 10);
 }else{
-	_objeto setdir ((getdir _objeto) - 0.001);
-	//systemchat str [getdir _objeto,(getdir _objeto) - 0.001];
+	_objeto setdir ( ( (getdir _objeto) - (getdir (attachedTo _objeto))) - 10);;
 };
-//gira siempre para el miosmo lado...
-//resulta un tanto util ya que tiene que usar addaction para sacarlo o ponerlo
+false

@@ -1,5 +1,5 @@
 
-class TartaMenu {
+class TartaMenu_8 {
 	idd= 1314;
 	controls[]={
 			menu_base,
@@ -27,7 +27,7 @@ class TartaMenu {
 	class menu_base: RscPicture
 	{
 		idc = 1200;
-		text = "img\tartamenu\menu_8\v.paa";
+		text = "img\tartamenu\menu_8\fondo.paa";
 		x = 0.365937 * safezoneW + safezoneX;
 		y = 0.269 * safezoneH + safezoneY;
 		w = 0.257813 * safezoneW;
@@ -231,12 +231,11 @@ class TartaMenu {
 	};
 	class tartamenu_imagen_centro: RscPicture
 	{
-		text = "";
 		idc = 1410;
-		x = 0.474219 * safezoneW + safezoneX;
-		y = 0.467 * safezoneH + safezoneY;
-		w = 0.04125 * safezoneW;
-		h = 0.077 * safezoneH;
-
+		text = "";
+		x = 0.479375 * safezoneW + safezoneX;
+		y = 0.544 * safezoneH + safezoneY;
+		w = 0.0309375 * safezoneW;
+		h = 0.066 * safezoneH;
 	};
 };

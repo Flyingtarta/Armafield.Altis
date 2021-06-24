@@ -1,3 +1,4 @@
+//["0.365937 * safezoneW + safezoneX","0.269 * safezoneH + safezoneY","0.257813 * safezoneW","0.462 * safezoneH"]
 /*
 	Descripcion:
 
@@ -40,11 +41,29 @@
 #define IMG7 1417
 #define IMG8 1418
 
-params [["_img1",""],["_img2",""],["_img3",""],["_img4",""],["_img5",""],["_img6",""],["_img7",""],["_img8",""],["_img0","img\ico\atras.paa"]];
+params [["_img1",""],["_img2",""],["_img3",""],["_img4",""],["_img5",""],["_img6",""],["_img7",""],["_img8",""],["_materiales",true],["_img0","img\ico\atras.paa"]];
 
 //armamos el menu poniendole las images
-createDialog "TartaMenu";
+createDialog "TartaMenu_8";
 waituntil {!(isnull (finddisplay TARTAMENU))};
+
+_mmenu = "";
+_hdler = [];
+if (_materiales) then {
+  _mmenu = findDisplay 46 createDisplay "materiales_inmenu";
+  #define displayRecursos 3333
+  #define muni   3000
+  #define mate   3001
+  #define muni_c 3002
+  #define mate_c 3003
+  private _recursos =  [player] call clv_fnc_fob_recursosDisp;
+  ((findDisplay displayRecursos) displayCtrl mate) ctrlSetText  str(_recursos #0);
+  ((findDisplay displayRecursos) displayCtrl muni) ctrlSetText str(_recursos #1);
+  _hdler = (findDisplay 46) displayAddEventHandler ["onMouseMoving","systemchat str _this"];
+  //((findDisplay 3333) displayCtrl muni_c) ctrlSetText  str(0);
+  //((findDisplay 3333) displayCtrl mate_c) ctrlSetText str(0);
+
+};
 
 ctrlSetText [IMG0,_img0];
 ctrlSetText [IMG1,_img1];
@@ -56,13 +75,15 @@ ctrlSetText [IMG6,_img6];
 ctrlSetText [IMG7,_img7];
 ctrlSetText [IMG8,_img8];
 
-
-
 //inicimos el menu y esperamos respuesta del jugador
 localnamespace setvariable ["TARTAMENU_OUTPUT",-1];
 
 waituntil { localnamespace getvariable ["TARTAMENU_OUTPUT",-1] isnotequalto -1 || isnull(finddisplay TARTAMENU) };
 _respuesta = localnamespace getvariable ["TARTAMENU_OUTPUT",-1];
+if (_materiales) then {
+  _mmenu closedisplay 1;
+  (findDisplay 46) displayRemoveEventHandler ["onMouseMoving",_hdler];
+};
 closeDialog 1;
 _respuesta
 

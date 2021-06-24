@@ -25,15 +25,15 @@ _duracion = 20;
 
 params ["_caller","_type","_pos","_dir","_duracion"];
 
-_pos = _pos vectoradd [0,0,-5];
-_forti = createVehicle [_type,_pos,[],0,"CAN_COLLIDE"];
+private _forti = createVehicle [_type,_pos,[],0,"CAN_COLLIDE"];
+private _bb = (2 boundingBox _forti);
 _forti setdir _dir;
 _forti setvectorup (surfaceNormal (getpos _forti));
 _caller action ["SwitchWeapon", player, player, 100];
 
 [_caller,"AinvPknlMstpSnonWnonDnon_medic_1"]remoteexec ["playmovenow",0];
 
-contruyendo = true;
+construyendo = true;
 
 //addaction para cancelar
 _cancelar = player addAction
@@ -41,14 +41,14 @@ _cancelar = player addAction
 	"<t color='#FF0000'>Cancelar</t>",	// title
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
-		contruyendo = false;
+		construyendo = false;
 	},
 	nil,		// arguments
 	0,		// priority
 	false,		// showWindow
 	false,		// hideOnUse
 	"LeanRight",			// shortcut
-	"contruyendo", 	// condition
+	"construyendo", 	// condition
 	1,			// radius
 	false,		// unconscious
 	"",			// selection
@@ -56,8 +56,11 @@ _cancelar = player addAction
 ];
 
 private _cancelado = false;
+
+//if (_type isequalto "Land_HBarrierTower_F") then {_max = 100};
+_forti enableSimulation false;
 for "_i" from 0 to 100 do {
-	if !(contruyendo) then {
+	if !(construyendo) then {
 		deletevehicle _forti;
 		_cancelado = true;
 		break
@@ -65,16 +68,17 @@ for "_i" from 0 to 100 do {
 	if (_i % 5 isequalto 0) then { //reinicia la animacion
 		[_caller,"AinvPknlMstpSnonWnonDnon_medic_1"] remoteexec ["playmovenow",0];
 	};
-	_pos = _pos vectoradd [0,0,(5/110)];
+	_pos = _pos vectoradd [0,0,(_bb#2)/100];
 	_forti setpos _pos;
 	sleep (20/100);
 };
-
+_forti enableSimulation true;
 player removeaction _cancelar;
 [_caller,"Terminate"] remoteexec ["playmovenow",0];
-//deberia ser remote exec al server <-------------------------------------------
-if !(_cancelado) then {
+
+//deberia ser remote exec al server solo si es un FOB<-------------------------------------------
+/*if !(_cancelado) then {
 	[_forti] call clv_fnc_init_fob;
 };
-
+*/
 _forti

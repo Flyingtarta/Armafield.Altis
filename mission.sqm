@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=74;
+		nextID=111;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={23902.633,6.1262493,18357.664};
-		dir[]={0.58881086,-0.7731998,0.23576365};
-		up[]={0.71777278,0.634188,0.28740066};
-		aside[]={0.37173975,-1.0616495e-006,-0.92840403};
+		pos[]={7860.7373,260.70911,16658.459};
+		dir[]={-0.78136933,-0.46205002,0.41948992};
+		up[]={-0.40709266,0.88685381,0.21855384};
+		aside[]={0.47300905,0,0.88105756};
 	};
 };
 binarizationWanted=0;
@@ -28,9 +28,9 @@ addons[]=
 {
 	"A3_Ui_F",
 	"A3_Structures_F_Mil_Helipads",
-	"A3_Characters_F",
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Soft_F_Exp_Truck_01",
+	"A3_Characters_F",
 	"A3_Structures_F_Exp_Military_Fortifications",
 	"A3_Static_F_Mortar_01",
 	"A3_Static_F_AT_01",
@@ -58,22 +58,22 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="A3_Characters_F";
-			name="Arma 3 Alpha - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item3
-		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item3
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -124,8 +124,8 @@ class Mission
 		year=2035;
 		month=6;
 		day=24;
-		hour=10;
-		minute=-9;
+		hour=5;
+		minute=-21;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
@@ -203,96 +203,22 @@ class Mission
 		};
 		class Item5
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7860.9922,252.6078,16664.707};
-						angles[]={0,0.31970942,0};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						init="createDialog ""TartaMenu""" \n "";
-					};
-					id=14;
-					type="B_Soldier_A_F";
-					atlOffset=1.5258789e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male11ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=13;
-			atlOffset=1.5258789e-005;
-		};
-		class Item6
-		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7853.6826,255.20378,16664.322};
-				angles[]={6.2192731,0.66556382,6.247201};
+				position[]={7853.6831,255.20378,16664.322};
+				angles[]={6.2192717,0.66556382,6.2471962};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="this setvariable [""materiales"",10000,true];";
+				init="this setvariable [""materiales"",1000,true];" \n "this setVariable [""municion"",1000,true];" \n "";
 			};
 			id=15;
 			type="B_Truck_01_Repair_F";
 		};
-		class Item7
+		class Item6
 		{
 			dataType="Group";
 			side="West";
@@ -304,7 +230,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7866.7769,252.12991,16682.947};
+						position[]={7861.3545,252.46828,16662.734};
+						angles[]={0,0.41351715,0};
 					};
 					side="West";
 					flags=7;
@@ -363,13 +290,13 @@ class Mission
 			};
 			id=59;
 		};
-		class Item8
+		class Item7
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23907.506,3.6073108,18370.828};
-				angles[]={-0,0.43792656,0};
+				position[]={23904.203,3.6073108,18364.744};
+				angles[]={0,0.43792656,0};
 			};
 			side="Empty";
 			flags=4;
@@ -379,13 +306,13 @@ class Mission
 			id=66;
 			type="Land_BagFence_01_long_green_F";
 		};
-		class Item9
+		class Item8
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23904.914,3.6073108,18358.836};
-				angles[]={-0,3.8138936,0};
+				position[]={23904.721,3.6073108,18368.049};
+				angles[]={0,3.8138936,0};
 			};
 			side="Empty";
 			flags=4;
@@ -395,13 +322,13 @@ class Mission
 			id=67;
 			type="Land_BagFence_01_round_green_F";
 		};
-		class Item10
+		class Item9
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23899.361,4.2585058,18363.332};
-				angles[]={-0,3.1638484,0};
+				position[]={23905.049,4.2585058,18360.176};
+				angles[]={0,3.1638484,0};
 			};
 			side="Empty";
 			flags=4;
@@ -411,7 +338,7 @@ class Mission
 			id=68;
 			type="Land_BagBunker_01_small_green_F";
 		};
-		class Item11
+		class Item10
 		{
 			dataType="Object";
 			class PositionInfo
@@ -426,7 +353,7 @@ class Mission
 			id=69;
 			type="O_G_Mortar_01_F";
 		};
-		class Item12
+		class Item11
 		{
 			dataType="Object";
 			class PositionInfo
@@ -441,7 +368,7 @@ class Mission
 			id=70;
 			type="O_static_AT_F";
 		};
-		class Item13
+		class Item12
 		{
 			dataType="Object";
 			class PositionInfo
@@ -456,7 +383,7 @@ class Mission
 			id=71;
 			type="B_HMG_01_A_F";
 		};
-		class Item14
+		class Item13
 		{
 			dataType="Object";
 			class PositionInfo
@@ -472,7 +399,7 @@ class Mission
 			type="B_HMG_01_high_F";
 			atlOffset=-0.00012207031;
 		};
-		class Item15
+		class Item14
 		{
 			dataType="Object";
 			class PositionInfo
@@ -486,6 +413,18 @@ class Mission
 			};
 			id=73;
 			type="B_T_Static_AA_F";
+		};
+		class Item15
+		{
+			dataType="Trigger";
+			position[]={7867.5449,252.30762,16667.299};
+			class Attributes
+			{
+				sizeA=25;
+				sizeB=25;
+			};
+			id=74;
+			type="EmptyDetectorAreaR50";
 		};
 	};
 };
