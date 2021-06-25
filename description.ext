@@ -1,11 +1,9 @@
 class CfgFunctions {
-	#include "fnc\cfgfunctions.hpp"
+	#include "cfgfunctions.hpp"
 };
 
 RECOMPILE = 1;
 
 //Interfaces
-#include "gui\common.hpp"
-#include "gui\tartamenu.hpp"
-#include "gui\tartamenu3.hpp"
-#include "gui\materiales_inmenu.hpp"
+#include "common.hpp"
+#include "modulos\tartamenu\tartamenu_diag.hpp"
