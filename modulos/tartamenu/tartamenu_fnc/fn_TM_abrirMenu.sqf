@@ -29,7 +29,18 @@ if (isnull(findDisplay 1314) && _key isequalto 41) then {
       "modulos\tartamenu\tartamenu_img\ico\mg2.paa",
       "modulos\tartamenu\tartamenu_img\ico\trinchera1.paa",
       "modulos\tartamenu\tartamenu_img\ico\trinchera2.paa",
-      "modulos\tartamenu\tartamenu_img\ico\mortero.paa"
+      "modulos\tartamenu\tartamenu_img\ico\mortero.paa",
+      true,//mostrar materiales
+      [//costos
+        [100,100],//costo 1
+        [500,0],//costo 2
+        [100,200],//costo 3
+        [100,200],//costo 4
+        [300,0],//costo 5
+        [300,0],//costo 6
+        [300,0],//costo 7
+        [100,500]//costo 8
+      ]
     ]call clv_fnc_TM_menuRadial8;
 
     if (_resp > 0) then {
