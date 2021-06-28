@@ -6,6 +6,9 @@ sleep 1;
 _keydown = findDisplay 46 displayAddEventHandler ["KeyDown", "_this spawn clv_fnc_TM_abrirMenu"];
 
 
+//construccion: 20 (T)
+//menu accion (al lado del 1) definir 
+
 /*
 player addAction
 [

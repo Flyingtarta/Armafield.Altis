@@ -2,6 +2,8 @@
 class TARTA
 {
 	tag = "clv";
+	//common
+	#include "modulos\common\common_fncs.hpp"
 	//Fob
 	#include "modulos\Fob\fob_fncs.hpp"
 	//Gamemode

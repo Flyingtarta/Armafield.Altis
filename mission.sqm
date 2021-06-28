@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1537;
+	toggles=513;
 	class ItemIDProvider
 	{
 		nextID=116;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9018.71,263.82422,15992.916};
-		dir[]={0.84493417,-0.52253211,-0.11422193};
-		up[]={0.51782203,0.85261959,-0.070001468};
-		aside[]={-0.13396588,0,-0.99098605};
+		pos[]={7858.3389,266.00677,16652.516};
+		dir[]={0.47669271,-0.71511286,0.51125109};
+		up[]={0.48767483,0.699009,0.52302933};
+		aside[]={0.73139411,-2.9802322e-008,-0.68195504};
 	};
 };
 binarizationWanted=0;
@@ -38,6 +38,7 @@ addons[]=
 	"A3_Weapons_F",
 	"A3_Weapons_F_Pistols_P07",
 	"A3_Weapons_F_Items",
+	"vtn_wounds",
 	"A3_Structures_F_Exp_Military_Fortifications",
 	"A3_Static_F_Mortar_01",
 	"A3_Static_F_AT_01",
@@ -48,7 +49,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -107,19 +108,24 @@ class AddonsMetaData
 		};
 		class Item8
 		{
+			className="vtn_wounds";
+			name="vtn_wounds";
+		};
+		class Item9
+		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item10
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item11
 		{
 			className="A3_Static_F_Exp";
 			name="Arma 3 Apex - Turrets";
@@ -477,7 +483,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23905.053,4.1715341,18349.004};
+				position[]={7801.5552,247.16809,16637.734};
+				angles[]={6.1874781,0,6.1388631};
 			};
 			side="Empty";
 			flags=4;
@@ -486,6 +493,7 @@ class Mission
 			};
 			id=70;
 			type="O_static_AT_F";
+			atlOffset=-0.014755249;
 		};
 		class Item10
 		{
@@ -561,18 +569,6 @@ class Mission
 		class Item15
 		{
 			dataType="Marker";
-			position[]={4843.7119,227.40199,17661.049};
-			name="marker_2";
-			markerType="ELLIPSE";
-			type="ellipse";
-			a=1000;
-			b=1000;
-			id=112;
-			atlOffset=0.00033569336;
-		};
-		class Item16
-		{
-			dataType="Marker";
 			position[]={14245.356,88.475998,21936.912};
 			name="marker_5";
 			markerType="RECTANGLE";
@@ -581,6 +577,18 @@ class Mission
 			b=1000;
 			id=113;
 			atlOffset=-6.1035156e-005;
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={4843.7119,227.40199,17661.049};
+			name="marker_2";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=1000;
+			b=1000;
+			id=112;
+			atlOffset=0.00033569336;
 		};
 	};
 };
