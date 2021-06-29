@@ -1,7 +1,47 @@
 params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
 
+// Si el menu ya esta abierto sale
+if !(isnull(findDisplay 1314)) EXITWITH {};
+
+/*
+    Menu de 3 con :
+    1 - Fortificaciones | Falta logo
+    2 - Armamento       | falta hacer logo
+    3 - FOB             | logo fob
+  - Sin costos
+*/
+
+private _MenuConstruccion = [
+
+  "modulos\tartamenu\tartamenu_img\ico\build.paa",
+  "modulos\tartamenu\tartamenu_img\ico\AA.paa", // remplazar
+  "modulos\tartamenu\tartamenu_img\ico\rally.paa"
+] call clv_fnc_TM_menuRadial3;
+
+
+switch (_menuConstruccion) do {
+
+    case 1: {
+      hint "WIP | FORTIFICACIONES";
+    };
+
+    case 2: { //
+      hint "WIP | ARMAMENTO PESADO";
+    };
+
+    case 3: { // FOB
+      hint "WIN  | FOB de respawn";
+    };
+    //cases (insertable by snippet)
+};
+
+
+
+
+/*
+
 //systemchat str [isnull(findDisplay 1314), _key isequalto 41];
-if (isnull(findDisplay 1314) && _key isequalto 41) then {
+if (isnull(findDisplay 1314)) then {
   private _resp = [
     "modulos\tartamenu\tartamenu_img\ico\build.paa",
     "modulos\tartamenu\tartamenu_img\ico\rally.paa",
