@@ -4,10 +4,8 @@ contruyendo = false;
 (findDisplay 46) displayRemoveAllEventHandlers "KeyDown"; //debug para sacar todos los EH
 sleep 1;
 _keydown = findDisplay 46 displayAddEventHandler ["KeyDown", {
-    systemchat str _this;
     private _key = _this select 1;
     if (_key isequalto 20) then { // T
-      Hint " Menu ";
       _this spawn clv_fnc_TM_abrirMenuConstruccion;
     };
   }];
