@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=190;
+		nextID=193;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=9;
 	};
 	class Camera
 	{
-		pos[]={15162.01,23.505978,17227.855};
-		dir[]={-0.81868547,-0.48425427,0.30897391};
-		up[]={-0.4531213,0.87489235,0.1710069};
-		aside[]={0.35313231,1.5221885e-006,0.93569154};
+		pos[]={7859.2827,259.6803,16656.063};
+		dir[]={0.58858591,-0.66645449,0.45760801};
+		up[]={0.52614576,0.74554569,0.40906262};
+		aside[]={0.61378932,-2.9802322e-008,-0.7894699};
 	};
 };
 binarizationWanted=0;
@@ -61,7 +61,9 @@ addons[]=
 	"vtn_wheelede_uaz_cf",
 	"A3_Air_F_EPB_Heli_Light_03",
 	"vtn_tripode_zu23_cf",
-	"A3_Structures_F_Civ_Camping"
+	"A3_Structures_F_Civ_Camping",
+	"A3_Static_F_HMG_02",
+	"A3_Static_F_AT_01"
 };
 class AddonsMetaData
 {
@@ -251,7 +253,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=12;
 		class Item0
 		{
 			dataType="Marker";
@@ -524,7 +526,7 @@ class Mission
 			name="loadout";
 			class Entities
 			{
-				items=46;
+				items=47;
 				class Item0
 				{
 					dataType="Object";
@@ -627,7 +629,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15167.891,18.514433,17224.32};
-						angles[]={-0,0.75907409,0};
+						angles[]={0,0.75907409,0};
 					};
 					side="Empty";
 					flags=4;
@@ -851,7 +853,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15171.385,18.921703,17222.012};
-						angles[]={-0,2.2553494,0};
+						angles[]={0,2.2553494,0};
 					};
 					side="Empty";
 					flags=4;
@@ -1262,8 +1264,26 @@ class Mission
 					id=166;
 					type="VTN_ZU23_FLR";
 				};
+				class Item46
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7860.709,255.74174,16666.414};
+						angles[]={6.2113123,1.4518521,6.206007};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="this setvariable [""materiales"",1000];" \n "this setVariable [""municion"",1500]";
+					};
+					id=190;
+					type="VTN_MTVR_MK23_WDL";
+				};
 			};
 			id=185;
+			atlOffset=89.274628;
 		};
 		class Item8
 		{
@@ -1295,6 +1315,40 @@ class Mission
 			};
 			id=189;
 			type="Land_TentA_F";
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7863.123,253.901,16660.471};
+				angles[]={6.2192717,2.579335,6.2205977};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="sup";
+			};
+			id=191;
+			type="B_G_HMG_02_high_F";
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7866.2769,252.80188,16657.27};
+				angles[]={6.2445412,0,6.2206011};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=192;
+			type="I_static_AT_F";
+			atlOffset=-6.1035156e-005;
 		};
 	};
 };

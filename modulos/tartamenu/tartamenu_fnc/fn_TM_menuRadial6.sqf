@@ -42,8 +42,8 @@
 #define displayRecursos 3333
 #define muni   3000
 #define mate   3001
-#define muni_c 3002
-#define mate_c 3003
+#define mate_c 3002
+#define muni_c 3003
 
 params [["_img1",""],["_img2",""],["_img3",""],["_img4",""],["_img5",""],["_img6",""],["_materiales",false],["_costos",[]],["_img0","modulos\tartamenu\tartamenu_img\ico\atras.paa"]];
 
@@ -62,8 +62,8 @@ _hdler = [];
 if (_materiales) then {
   _mmenu = findDisplay 46 createDisplay "materiales_inmenu";
   private _recursos =  [player] call clv_fnc_fob_recursosDisp;
-  ((findDisplay displayRecursos) displayCtrl mate) ctrlSetText str(_recursos #0);
-  ((findDisplay displayRecursos) displayCtrl muni) ctrlSetText str(_recursos #1);
+  ((findDisplay displayRecursos) displayCtrl mate) ctrlSetText str(_recursos #1);//materiales
+  ((findDisplay displayRecursos) displayCtrl muni) ctrlSetText str(_recursos #0);//municion
 };
 
 ctrlSetText [IMG0,_img0];
@@ -88,8 +88,8 @@ waituntil {
         ( (findDisplay displayRecursos) displayCtrl mate_c) ctrlSetTextColor [1, 0.2, 0.2, 1]; //colordel texto
         ( (findDisplay displayRecursos) displayCtrl muni_c) ctrlSetTextColor [1, 0.2, 0.2, 1]; //colordel texto
       }else{
-        ( (findDisplay displayRecursos) displayCtrl muni_c) ctrlSetText str (0); // municion
-        ( (findDisplay displayRecursos) displayCtrl mate_c) ctrlSetText str (0); // materiales
+        ( (findDisplay displayRecursos) displayCtrl muni_c) ctrlSetText ""; // municion
+        ( (findDisplay displayRecursos) displayCtrl mate_c) ctrlSetText ""; // materiales
       }
     };
   };

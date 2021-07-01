@@ -84,6 +84,7 @@ localnamespace setvariable ["TARTAMENU_OUTPUT",-1];
 waituntil {
   if (_materiales) then {
     if (_costos isnotequalto [] ) then {
+      _aviable = [player] call clv_fnc_fob_recursosDisp;
       _idx = localnamespace getvariable ["TARTAMENU_SELECT",-1];
       if (_idx > 0) then {
         _recursos = _costos select (_idx-1);
@@ -91,6 +92,9 @@ waituntil {
         ( (findDisplay displayRecursos) displayCtrl muni_c) ctrlSetText str ( (_recursos #1)*-1); // materiales
         ( (findDisplay displayRecursos) displayCtrl mate_c) ctrlSetTextColor [1, 0.2, 0.2, 1]; //colordel texto
         ( (findDisplay displayRecursos) displayCtrl muni_c) ctrlSetTextColor [1, 0.2, 0.2, 1]; //colordel texto
+        //disponibles
+        ( (findDisplay displayRecursos) displayCtrl muni) ctrlSetText str (_aviable #0); // municion
+        ( (findDisplay displayRecursos) displayCtrl mate) ctrlSetText str (_aviable #1); // materiales
       }else{
         ( (findDisplay displayRecursos) displayCtrl muni_c) ctrlSetText str (0); // municion
         ( (findDisplay displayRecursos) displayCtrl mate_c) ctrlSetText str (0); // materiales

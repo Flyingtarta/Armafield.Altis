@@ -27,7 +27,7 @@ private _unit = _this select 0;
 private _mate = 0;
 private _muni = 0;
 
-private _camiones = (getpos _unit) nearEntities ["Truck_F",25];
+private _camiones = (getpos _unit) nearEntities ["LandVehicle",25];
 //private _camiones = (getpos _unit) nearEntities ["Truck_F",25];               falta detectar cajas
 
 

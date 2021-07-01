@@ -19,13 +19,12 @@
 
 //_modelo = "Land_HBarrierTower_F";//"Land_BagBunker_Tower_F";
 
-params["_modelo","_distancia"];
-systemchat str _modelo;
+params["_modelo"];//,"_distancia"];
 private _pos = getpos player getpos [getdir player,5];
 forti = _modelo createVehiclelocal _pos; // lo creamos "global" al jugador
 private _forti = forti;
 private _bb = (2 boundingBox _forti) #1 #2;
-private _rbb = (2 boundingbox _forti) # 2;
+private _rbb = ((2 boundingbox _forti) # 2) * 3;
 _forti attachto [player,[0,_rbb,0]];
 
 
@@ -54,7 +53,7 @@ _keydown = findDisplay 46 displayAddEventHandler ["KeyDown", {
 
 while {(attachedto _forti) isnotequalto objNull} do {
 	_forti = forti;
-	_pos = (getpos player) getpos [10,getdir player];
+	_pos = (getpos player) getpos [_rbb,getdir player];
 	if !([_forti] call clv_fnc_fob_canbuild ) then {
 		detach _forti;
 		deletevehicle _forti;
@@ -64,7 +63,12 @@ while {(attachedto _forti) isnotequalto objNull} do {
 	_posasl = atltoasl _pos;
 	_vectorup = surfaceNormal _pos;
 	_relativeZ = ((_posasl #2)+_bb) - (getposasl player #2);
-	_forti attachto [player,[0,10,_relativeZ]];
+	_angulo = atan((getCameraViewDirection player#2)*-1);
+	_dis = (1.8/tan(_angulo));
+	hint str (_angulo);
+	if (_dis < 0) then {_dis = _rbb};
+	if (_dis > _rbb) then { _dis = _rbb};
+	_forti attachto [player,[0,_dis,_relativeZ]];
 	_forti setvectorup (surfaceNormal (getpos _forti));
 	sleep 0.1;
 };
@@ -73,6 +77,7 @@ while {(attachedto _forti) isnotequalto objNull} do {
 (findDisplay 46) displayremoveEventHandler ["MouseZchanged",_rotacion];
 //(findDisplay 46) displayremoveEventHandler ["KeyDown",_keydown];
 findDisplay 46 displayRemoveEventHandler ["keyDown",_keydown];
+true
 /*
 player removeAction _ubicar;
 player removeAction _cancelar;

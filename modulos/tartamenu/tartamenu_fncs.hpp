@@ -7,3 +7,11 @@ class MenuRadial
 	class TM_menuRadial6					{};
 	class TM_menuRadial8					{};
 };
+
+class menuConstruccion {
+	file = "modulos\tartamenu\tartamenu_fnc\menuCostruccion";
+	class TM_forti 			{};
+	class TM_HMred 			{};
+	class TM_HMblue			{};
+	class TM_fobs  			{};
+};

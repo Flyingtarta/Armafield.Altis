@@ -16,7 +16,7 @@ class TartaMenu_3 {
 	class menu_base: RscPicture
 	{
 		idc = 1200;
-		text = "modulos\tartamenu\img\tartamenu\menu_3\fondo.paa";
+		text = "modulos\tartamenu\tartamenu_img\tartamenu\menu_3\fondo.paa";
 		x = 0.365937 * safezoneW + safezoneX;
 		y = 0.269 * safezoneH + safezoneY;
 		w = 0.257813 * safezoneW;
@@ -64,7 +64,7 @@ class TartaMenu_3 {
 	class tartamenu_boton_1: RscEdit
 	{
 		idc = 1401;
-		onMouseMoving = " if (  _this select 3 && ( ctrltext 1411 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\img\tartamenu\menu_3\s1.paa'];localnamespace setvariable ['TARTAMENU_SELECT',1]}";
+		onMouseMoving = " if (  _this select 3 && ( ctrltext 1411 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_3\s1.paa'];localnamespace setvariable ['TARTAMENU_SELECT',1]}";
 		onMouseButtonDown = "if (ctrltext 1411 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',1] } else { closeDialog 1 }";
 
 		x = 0.469062 * safezoneW + safezoneX;
@@ -77,7 +77,7 @@ class TartaMenu_3 {
 	class tartamenu_boton_2: RscEdit
 	{
 		idc = 1402;
-		onMouseMoving = " if (  _this select 3 && ( ctrltext 1412 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\img\tartamenu\menu_3\s2.paa'];localnamespace setvariable ['TARTAMENU_SELECT',2]}";
+		onMouseMoving = " if (  _this select 3 && ( ctrltext 1412 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_3\s2.paa'];localnamespace setvariable ['TARTAMENU_SELECT',2]}";
 		onMouseButtonDown = "if (ctrltext 1411 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',2] } else { closeDialog 1 }";
 		x = 0.54125 * safezoneW + safezoneX;
 		y = 0.555 * safezoneH + safezoneY;
@@ -89,7 +89,7 @@ class TartaMenu_3 {
 	class tartamenu_boton_3: RscEdit
 	{
 		idc = 1403;
-		onMouseMoving = " if (  _this select 3 && ( ctrltext 1413 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\img\tartamenu\menu_3\s3.paa'];localnamespace setvariable ['TARTAMENU_SELECT',3]}";
+		onMouseMoving = " if (  _this select 3 && ( ctrltext 1413 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_3\s3.paa'];localnamespace setvariable ['TARTAMENU_SELECT',3]}";
 		onMouseButtonDown = "if (ctrltext 1411 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',3] } else { closeDialog 1 }";
 		x = 0.396875 * safezoneW + safezoneX;
 		y = 0.555 * safezoneH + safezoneY;
@@ -101,7 +101,7 @@ class TartaMenu_3 {
 	class tartamenu_boton_centro: RscEdit
 	{
 		idc = 1400;
-		onMouseMoving = " if (  _this select 3 && ( ctrltext 1410 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\img\tartamenu\menu_3\s0.paa'];localnamespace setvariable ['TARTAMENU_SELECT',0]}";
+		onMouseMoving = " if (  _this select 3 && ( ctrltext 1410 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_3\s0.paa'];localnamespace setvariable ['TARTAMENU_SELECT',0]}";
 		onMouseButtonDown = "if (ctrltext 1411 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',0] } else { closeDialog 1 }";
 		x = 0.45875 * safezoneW + safezoneX;
 		y = 0.445 * safezoneH + safezoneY;

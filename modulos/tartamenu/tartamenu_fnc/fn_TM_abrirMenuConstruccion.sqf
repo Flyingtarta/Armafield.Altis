@@ -1,7 +1,7 @@
 
 #define montadasBlue ["VTN_M240G_M122","VTN_M2HB_WDL","B_GMG_01_high_F","B_G_Mortar_01_F"]
 #define montadasRed  ["VTN_KORD_6T19_SPP","VTN_KORD_6T20","VTN_METIS_M1_RC","B_G_Mortar_01_F","VTN_ZU23_FLR"]
-#define forti        ["Land_BagBunker_Small_F","Land_ConcreteHedgehog_01_F","Land_Razorwire_F","Land_SandbagBarricade_01_half_F","Land_SandbagBarricade_01_F","Land_SandbagBarricade_01_hole_F","Land_BagFence_Long_F","Land_BagFence_Round_F"]
+
 #define fobs         ["Land_HBarrierTower_F","Land_TentDome_F"]
 
 
@@ -16,7 +16,7 @@ if !(isnull(findDisplay 1314)) exitwith {};
     1 - Fortificaciones | Falta logo
     2 - Armamento       | falta hacer logo
     3 - FOB             | logo fob
-  - Sin costos
+    - Sin costos
 */
 
 private _MenuConstruccion = [
@@ -30,15 +30,8 @@ private _MenuConstruccion = [
 switch (_menuConstruccion) do {
 
     case 1: {
-      /* falta expandir
-      Menu de 6 con :
-      1 - Bunker
-      2 - bolsas |
-      3 - Bolsas C
-      4 - Bolsa altas 1
-      5 - Bolsa alta 2
-      */
-      hint "WIP | FORTIFICACIONES";
+      //fortificaciones (menu de 8)
+      [] call clv_fnc_TM_forti;
     };
 
     case 2: {
@@ -51,7 +44,8 @@ switch (_menuConstruccion) do {
       5 - ATGM
       6 - Mortero
       */
-
+      if (side player isequalto west) then { [] call clv_fnc_TM_HMred};
+      if (side player isequalto east) then { [] call clv_fnc_TM_HMblue};
       hint "WIP | ARMAMENTO PESADO";
     };
 
@@ -62,6 +56,7 @@ switch (_menuConstruccion) do {
       2 - RALLY |  Falta logo
       3 - nada
       */
+      [] call clv_fnc_TM_fobs;
       hint "WIN  | FOB de respawn";
 
     };
