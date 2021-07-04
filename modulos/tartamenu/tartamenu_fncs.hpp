@@ -10,8 +10,9 @@ class MenuRadial
 
 class menuConstruccion {
 	file = "modulos\tartamenu\tartamenu_fnc\menuCostruccion";
-	class TM_forti 			{};
-	class TM_HMred 			{};
-	class TM_HMblue			{};
-	class TM_fobs  			{};
+	class TM_deltaMateriales {};
+	class TM_fobs  					 {};
+	class TM_forti 					 {};
+	class TM_HMblue					 {};
+	class TM_HMred 					 {};
 };

@@ -33,11 +33,22 @@ private _resp = [
 //si no se selecciono nada sale
 if (_resp isequalto -1) exitWith{};
 
-if (_resp isequalto 0) then { // si selecciono el central, vuelve al menu anterior 
+if (_resp isequalto 0) exitwith { // si selecciono el central, vuelve al menu anterior
   waituntil {isnull(finddisplay 1314)};
   [] call clv_fnc_TM_abrirMenuConstruccion
 };
-// a partir de aca queremos el idex nomas
+// a partir de aca queremos el index nomas
 private _resp = _resp -1;
+private _costo = _costos select _resp;
+_costo params ["_ammo","_mater"];
 
-[forti select _resp] call clv_fnc_fob_ubicar;
+_desc = [_costo] call clv_fnc_TM_deltaMateriales;
+
+/*
+FALTA DESCONTAR PLATA AL CONTRUIR,
+EN CASO DE CANCELAR QUE NO DESCUENTE
+PODER "PAUSAR" PARA USAR ALGO PARCIAL
+*/
+if (_desc) then {
+  [forti select _resp] call clv_fnc_fob_ubicar;
+};

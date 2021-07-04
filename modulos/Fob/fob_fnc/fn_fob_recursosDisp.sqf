@@ -17,8 +17,8 @@
 
 	Return:
 		[ARRAY]
-      1: materiales (number)
-      2: municion   (number)
+      1: municion (number)
+      2: materiales   (number)
 
 */
 
@@ -44,4 +44,4 @@ _containers = _camiones select {
   _muni = _muni + (_x getvariable ["municion",0]  );
 }foreach _containers;
 
-[_mate,_muni]
+[_muni,_mate]

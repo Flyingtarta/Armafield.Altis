@@ -22,7 +22,7 @@ if !(isnull(findDisplay 1314)) exitwith {};
 private _MenuConstruccion = [
 
   "modulos\tartamenu\tartamenu_img\ico\build.paa",
-  "modulos\tartamenu\tartamenu_img\ico\AA.paa", // remplazar
+  "modulos\tartamenu\tartamenu_img\ico\buildmenu\50cal.paa", // remplazar
   "modulos\tartamenu\tartamenu_img\ico\rally.paa"
 ] call clv_fnc_TM_menuRadial3;
 
@@ -44,8 +44,8 @@ switch (_menuConstruccion) do {
       5 - ATGM
       6 - Mortero
       */
-      if (side player isequalto west) then { [] call clv_fnc_TM_HMred};
-      if (side player isequalto east) then { [] call clv_fnc_TM_HMblue};
+      if (side player isequalto east) then { [] call clv_fnc_TM_HMred};
+      if (side player isequalto west) then { [] call clv_fnc_TM_HMblue};
       hint "WIP | ARMAMENTO PESADO";
     };
 

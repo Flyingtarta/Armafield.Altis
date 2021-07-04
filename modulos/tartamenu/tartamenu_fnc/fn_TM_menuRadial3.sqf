@@ -54,8 +54,8 @@ _hdler = [];
 if (_materiales) then {
   _mmenu = findDisplay 46 createDisplay "materiales_inmenu";
   private _recursos =  [player] call clv_fnc_fob_recursosDisp;
-  ((findDisplay displayRecursos) displayCtrl mate) ctrlSetText str(_recursos #0);
-  ((findDisplay displayRecursos) displayCtrl muni) ctrlSetText str(_recursos #1);
+  ((findDisplay displayRecursos) displayCtrl mate) ctrlSetText str(_recursos #1);
+  ((findDisplay displayRecursos) displayCtrl muni) ctrlSetText str(_recursos #0);
 };
 
 

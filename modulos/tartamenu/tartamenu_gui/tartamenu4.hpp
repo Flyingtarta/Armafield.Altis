@@ -36,11 +36,13 @@ class TartaMenu_4 {
 		colorText[] = {1,1,1,0};
 		colorBackground[] = {1,1,1,0};
 	};
+
 	class boton1: RscEdit
 	{
 		idc = 1401;
-		onMouseMoving = " if (  _this select 3 && ( ctrltext 1411 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_4\s1.paa'];localnamespace setvariable ['TARTAMENU_SELECT',1]}";
+		onMouseMoving = " if (  _this select 3 && ( ctrltext 1413 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_4\s1.paa'];localnamespace setvariable ['TARTAMENU_SELECT',1]}";
 		onMouseButtonDown = "if (ctrltext 1411 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',1] } else { closeDialog 1 }";
+
 		x = 0.438125 * safezoneW + safezoneX;
 		y = 0.313 * safezoneH + safezoneY;
 		w = 0.108281 * safezoneW;
@@ -54,6 +56,19 @@ class TartaMenu_4 {
 		idc = 1402;
 		onMouseMoving = " if (  _this select 3 && ( ctrltext 1412 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_4\s2.paa'];localnamespace setvariable ['TARTAMENU_SELECT',2]}";
 		onMouseButtonDown = "if (ctrltext 1412 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',2] } else { closeDialog 1 }";
+		x = 0.561875 * safezoneW + safezoneX;
+		y = 0.401 * safezoneH + safezoneY;
+		w = 0.0464063 * safezoneW;
+		h = 0.198 * safezoneH;
+		colorText[] = {1,1,1,0};
+		colorBackground[] = {1,1,1,0};
+	};
+
+	class boton3: RscEdit
+	{
+		idc = 1403;
+		onMouseMoving = " if (  _this select 3 && ( ctrltext 1413 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_4\s3.paa'];localnamespace setvariable ['TARTAMENU_SELECT',3]}";
+		onMouseButtonDown = "if (ctrltext 1413 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',3] } else { closeDialog 1 }";
 		x = 0.438125 * safezoneW + safezoneX;
 		y = 0.621 * safezoneH + safezoneY;
 		w = 0.108281 * safezoneW;
@@ -62,26 +77,12 @@ class TartaMenu_4 {
 		colorBackground[] = {1,1,1,0};
 	};
 
-
-	class boton3: RscEdit
-	{
-		idc = 1403;
-		onMouseMoving = " if (  _this select 3 && ( ctrltext 1413 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_4\s3.paa'];localnamespace setvariable ['TARTAMENU_SELECT',3]}";
-		onMouseButtonDown = "if (ctrltext 1413 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',3] } else { closeDialog 1 }";
-		x = 0.386562 * safezoneW + safezoneX;
-		y = 0.401 * safezoneH + safezoneY;
-		w = 0.0464063 * safezoneW;
-		h = 0.198 * safezoneH;
-		colorText[] = {1,1,1,0};
-		colorBackground[] = {1,1,1,0};
-	};
-
 	class boton4: RscEdit
 	{
 		idc = 1404;
 		onMouseMoving = " if (  _this select 3 && ( ctrltext 1414 isnotequalto '')  ) then {ctrlsettext [1200,'modulos\tartamenu\tartamenu_img\tartamenu\menu_4\s4.paa'];localnamespace setvariable ['TARTAMENU_SELECT',4]}";
-		onMouseButtonDown = "if (ctrltext 1414 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',1] } else { closeDialog 1 }";
-		x = 0.561875 * safezoneW + safezoneX;
+		onMouseButtonDown = "if (ctrltext 1414 isnotequalto '') then { localnamespace setvariable ['TARTAMENU_OUTPUT',4] } else { closeDialog 1 }";
+		x = 0.386562 * safezoneW + safezoneX;
 		y = 0.401 * safezoneH + safezoneY;
 		w = 0.0464063 * safezoneW;
 		h = 0.198 * safezoneH;
