@@ -41,14 +41,19 @@ if (_resp isequalto 0) exitwith { // si selecciono el central, vuelve al menu an
 private _resp = _resp -1;
 private _costo = _costos select _resp;
 _costo params ["_ammo","_mater"];
+_deltaMateriales = _costo call clv_fnc_TM_deltaMateriales;
 
-_desc = [_costo] call clv_fnc_TM_deltaMateriales;
+
 
 /*
 FALTA DESCONTAR PLATA AL CONTRUIR,
 EN CASO DE CANCELAR QUE NO DESCUENTE
 PODER "PAUSAR" PARA USAR ALGO PARCIAL
 */
-if (_desc) then {
+systemchat str ["Deltamateriales",_deltaMateriales];
+if (_deltaMateriales) then { //si pudo descontar los materiales
+  materiales_consumidos = _costo; // hacemos global esta variable
   [forti select _resp] call clv_fnc_fob_ubicar;
-};
+}else{
+  hint "no hay suficiente materiales"
+}

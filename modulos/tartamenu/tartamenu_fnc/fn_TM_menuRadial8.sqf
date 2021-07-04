@@ -58,7 +58,6 @@ _handle ppEffectEnable true;
 _handle ppEffectAdjust [1];
 _handle ppEffectCommit -1;
 
-
 _mmenu = "";
 _hdler = [];
 if (_materiales) then {

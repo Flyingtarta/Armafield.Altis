@@ -42,6 +42,11 @@ _cancelar = player addAction
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
 		construyendo = false;
+		//devolvemos los materiales
+		if (isnil "materiales_consumidos") exitwith {systemchat " TartaError | materiales_consumidos no existe"};
+		_costo = materiales_consumidos;
+		_costo = _costo apply {_x*(-1)}; // lo hacemos positivo
+		_costo call clv_fnc_TM_deltaMateriales; //devolvemos los materiales
 	},
 	nil,		// arguments
 	0,		// priority
