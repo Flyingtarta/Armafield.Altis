@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=3;
+		nextID=12;
 	};
 	class Camera
 	{
-		pos[]={7877.063,263.12451,16668.535};
-		dir[]={-0.79642922,-0.39974681,-0.4537656};
-		up[]={-0.34732834,0.91662568,-0.19789034};
-		aside[]={-0.49503922,0,0.86887085};
+		pos[]={7842.8618,271.46069,16660.012};
+		dir[]={0.73082811,-0.68255967,-0.0016284692};
+		up[]={0.68255794,0.73082983,-0.0015209111};
+		aside[]={-0.0022282465,0,-0.9999975};
 	};
 };
 binarizationWanted=0;
@@ -94,8 +94,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7863.3159,252.22995,16660.93};
-						angles[]={6.2192731,1.0559295,6.2206001};
+						position[]={7855.7017,252.31316,16655.906};
+						angles[]={6.1756024,1.0559295,6.2206011};
 					};
 					side="West";
 					flags=6;
@@ -124,7 +124,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this setVariable [""municion"",1111];" \n "this setVariable [""materiales"",2222];";
+				init="this setVariable [""municion"",1500];" \n "this setVariable [""materiales"",2000];";
 			};
 			id=1;
 			type="B_Truck_01_box_F";

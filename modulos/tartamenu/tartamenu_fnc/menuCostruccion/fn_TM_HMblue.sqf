@@ -1,3 +1,18 @@
+/*
+  clv_fnc_TM_HMblue
+  BLUEFOR
+  EJECUCION LOCAL
+
+  Descripcion:
+    Funcion de menu de construccion de Armas pesadas por medio de TartaMenu
+
+  input:
+    none
+
+  output:
+    none
+*/
+
 #define montadas ["I_HMG_01_high_F","I_static_AT_F","I_GMG_01_high_F","I_Mortar_01_F"]
 
 //Sale si ya esta construyendo

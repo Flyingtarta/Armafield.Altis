@@ -1,3 +1,21 @@
+
+/*
+  clv_fnc_TM_forti
+
+  EJECUCION LOCAL
+
+  Descripcion:
+    Funcion de menu de construccion de fortificaciones por medio de TartaMenu
+
+  input:
+    none
+
+  output:
+    none
+*/
+
+
+
 //#define forti ["Land_BagBunker_Small_F","Land_ConcreteHedgehog_01_F","Land_Razorwire_F","Land_SandbagBarricade_01_half_F","Land_SandbagBarricade_01_F","Land_SandbagBarricade_01_hole_F","Land_BagFence_Long_F","Land_BagFence_Round_F"]
 
 #define forti ["Land_BagBunker_Small_F","Land_BagFence_Long_F","Land_BagFence_Round_F","Land_SandbagBarricade_01_F","Land_SandbagBarricade_01_hole_F","Land_Razorwire_F","Land_ConcreteHedgehog_01_F"]
@@ -43,11 +61,8 @@ private _costo = _costos select _resp;
 _costo params ["_ammo","_mater"];
 _deltaMateriales = _costo call clv_fnc_TM_deltaMateriales;
 
-
-
 /*
-FALTA DESCONTAR PLATA AL CONTRUIR,
-EN CASO DE CANCELAR QUE NO DESCUENTE
+
 PODER "PAUSAR" PARA USAR ALGO PARCIAL
 */
 systemchat str ["Deltamateriales",_deltaMateriales];
