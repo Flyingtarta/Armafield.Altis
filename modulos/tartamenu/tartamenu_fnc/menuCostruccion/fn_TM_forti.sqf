@@ -21,7 +21,7 @@
 #define forti ["Land_BagBunker_Small_F","Land_BagFence_Long_F","Land_BagFence_Round_F","Land_SandbagBarricade_01_F","Land_SandbagBarricade_01_hole_F","Land_Razorwire_F","Land_ConcreteHedgehog_01_F"]
 
 //referencia //[_this] call clv_fnc_fob_canbuild && attachedObjects _this isequalto []
-if (attachedObjects player isnotequalto [] || construyendo ) exitwith {hint "Ya estas construyendo "};
+if (ubicando || construyendo ) exitwith {hint "Ya estas construyendo "};
 
 private _costos =
   [//costos

@@ -32,7 +32,7 @@ if (_deltamateriales) then {
   materiales_consumidos = COSTO; //cosnumo de materiales
   [modeloFOB] call clv_fnc_fob_ubicar;
   sleep 1;
-  waituntil {!(construyendo)};
+  waituntil {!(construyendo) && !(isnil "fortiTerminada")};
   _fob = fortiTerminada;
   systemchat str (fortiTerminada);
   if !(isnull _fob) then {
@@ -48,8 +48,10 @@ if (isnil "_fob") exitwith {};
 
 
 _pos = getpos _fob;
-_grid = (getpos player) apply {str(round (_x/100))} select [0,2];
-_grid = str(composeText [_grid#0," ",_grid#1]);
+(getpos player) apply {str(round (_x/100))} select [0,2] params ["_h","_v"];
+if (count(_h) isequalto 2) then {_h = str(composeText ["0",_h])};
+if (count(_v) isequalto 2) then {_v = str(composeText ["0",_v])};
+_grid = str(composeText [_v," ",_h]);
 
 [[side player,_pos,_grid],{
   _respawn = _this call BIS_fnc_addRespawnPosition;

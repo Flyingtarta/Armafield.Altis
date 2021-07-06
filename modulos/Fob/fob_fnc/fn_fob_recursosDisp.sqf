@@ -17,8 +17,8 @@
 
 	Return:
 		[ARRAY]
-      1: municion (number)
-      2: materiales   (number)
+      1: municion   (number)
+      2: materiales (number)
 
 */
 
@@ -27,15 +27,15 @@ private _unit = _this select 0;
 private _mate = 0;
 private _muni = 0;
 
-private _camiones = (getpos _unit) nearEntities ["LandVehicle",25];
-//private _camiones = (getpos _unit) nearEntities ["Truck_F",25];               falta detectar cajas
+private _camiones = _unit nearEntities ["LandVehicle",25]; //falta detectar FOBs y cajas
 
+//private _camiones = (getpos _unit) nearEntities ["Truck_F",25];               falta detectar cajas
 
 _containers = _camiones select {
   alive _x &&
   (
      (_x getvariable ["materiales",0] > 0) ||
-     (_x getVariable ["municion",0] > 0)
+     (_x getVariable ["municion",0]   > 0)
   )
 };
 

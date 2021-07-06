@@ -13,7 +13,7 @@
 */
 params ["_muni","_mate"];
 
-private _fuentes = (getpos player) nearEntities ["LandVehicle",25]; //hacer que verifique FOBs y Cajas
+private _fuentes = (getpos player) nearEntities ["LandVehicle",35]; //hacer que verifique FOBs y Cajas
 //Seleccionamos la fuente que tenga los materiales suficientes
 private _fuente = _fuentes select {
     _x getvariable ["municion",0] >= _muni &&

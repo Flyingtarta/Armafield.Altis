@@ -1,4 +1,5 @@
 construyendo = false;
+ubicando = false;
 //tab = 58
 //blockmayus = 15
 

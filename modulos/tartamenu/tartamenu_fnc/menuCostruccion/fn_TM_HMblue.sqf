@@ -16,7 +16,7 @@
 #define montadas ["I_HMG_01_high_F","I_static_AT_F","I_GMG_01_high_F","I_Mortar_01_F"]
 
 //Sale si ya esta construyendo
-if (attachedObjects player isnotequalto [] ) exitwith {hint "Ya estas construyendo "};
+if (ubicando) exitwith {hint "Ya estas construyendo "};
 
 private _costos =
   [//costos

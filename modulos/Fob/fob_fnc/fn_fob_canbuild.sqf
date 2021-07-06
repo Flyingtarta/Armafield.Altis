@@ -16,7 +16,6 @@ params ["_unit"];
 
 //if !(_unit getvariable ["ingeniero",true]) exitwith {false}; //si no es ingeniero sale
 
-
 if ([_unit] call clv_fnc_fob_recursosDisp isnotequalto [0,0]) then {
 	true
 }else{
