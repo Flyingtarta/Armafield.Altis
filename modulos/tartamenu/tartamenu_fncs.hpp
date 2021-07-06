@@ -6,6 +6,7 @@ class MenuRadial
 	class TM_menuRadial4					{};
 	class TM_menuRadial6					{};
 	class TM_menuRadial8					{};
+	class TM_interact 					  {};
 };
 
 class menuConstruccion {

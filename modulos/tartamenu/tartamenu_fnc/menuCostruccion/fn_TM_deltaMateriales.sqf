@@ -14,13 +14,11 @@
 params ["_muni","_mate"];
 
 private _fuentes = (getpos player) nearEntities ["LandVehicle",25]; //hacer que verifique FOBs y Cajas
-systemchat str ["Fuentes |",_fuentes];
 //Seleccionamos la fuente que tenga los materiales suficientes
 private _fuente = _fuentes select {
     _x getvariable ["municion",0] >= _muni &&
     _x getvariable ["materiales",0] >= _mate
 };
-systemchat str ["Fuente |",_fuente];
 if (_fuente isnotequalto []) then {
     _fuente = _fuente #0; // seleccionamos la primera
     //descontamos los materiales y municion a la fuente

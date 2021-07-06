@@ -21,9 +21,7 @@
 		objeto : objeto creado
 */
 
-_duracion = 20;
-
-params ["_caller","_type","_pos","_dir","_duracion"];
+params ["_caller","_type","_pos","_dir",["_duracion",20]];
 
 private _forti = createVehicle [_type,_pos,[],0,"CAN_COLLIDE"];
 private _bb = (2 boundingBox _forti);
@@ -53,7 +51,7 @@ _cancelar = player addAction
 	false,		// showWindow
 	false,		// hideOnUse
 	"LeanRight",			// shortcut
-	"construyendo", 	// condition
+	"construyendo && !(isnil 'materiales_consumidos')", 	// condition
 	1,			// radius
 	false,		// unconscious
 	"",			// selection
@@ -62,8 +60,10 @@ _cancelar = player addAction
 
 private _cancelado = false;
 
-//if (_type isequalto "Land_HBarrierTower_F") then {_max = 100};
 _forti enableSimulation false;
+
+//[] spawn clv_fnc_progressBar;
+
 for "_i" from 0 to 100 do {
 	if !(construyendo) then {
 		deletevehicle _forti;
@@ -78,6 +78,7 @@ for "_i" from 0 to 100 do {
 	sleep (20/100);
 };
 _forti enableSimulation true;
+construyendo = false;
 player removeaction _cancelar;
 [_caller,"Terminate"] remoteexec ["playmovenow",0];
 
@@ -86,4 +87,4 @@ player removeaction _cancelar;
 	[_forti] call clv_fnc_init_fob;
 };
 */
-_forti
+fortiTerminada = _forti;

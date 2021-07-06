@@ -1,15 +1,12 @@
-
-#define montadasBlue ["VTN_M240G_M122","VTN_M2HB_WDL","B_GMG_01_high_F","B_G_Mortar_01_F"]
-#define montadasRed  ["VTN_KORD_6T19_SPP","VTN_KORD_6T20","VTN_METIS_M1_RC","B_G_Mortar_01_F","VTN_ZU23_FLR"]
-
-#define fobs         ["Land_HBarrierTower_F","Land_TentDome_F"]
+#define fobs ["Land_HBarrierTower_F","Land_TentDome_F"]
 
 
 
 params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
 
 // Si el menu ya esta abierto sale
-if !(isnull(findDisplay 1314)) exitwith {};
+if !( isnull(findDisplay 1314)) exitwith {};
+if !(isnull( objectparent player)) exitwith {};
 
 /*
     Menu de 3 con :
@@ -22,10 +19,9 @@ if !(isnull(findDisplay 1314)) exitwith {};
 private _MenuConstruccion = [
 
   "modulos\tartamenu\tartamenu_img\ico\build.paa",
-  "modulos\tartamenu\tartamenu_img\ico\buildmenu\50cal.paa", // remplazar
-  "modulos\tartamenu\tartamenu_img\ico\rally.paa"
+  "\A3\Static_F_Gamma\data\UI\map_StaticTurret_AA_CA.paa", // remplazar
+  "modulos\tartamenu\tartamenu_img\ico\FOB.paa"
 ] call clv_fnc_TM_menuRadial3;
-
 
 switch (_menuConstruccion) do {
 
@@ -35,30 +31,13 @@ switch (_menuConstruccion) do {
     };
 
     case 2: {
-      /*
-      Menu de 6 con :
-      1 - .50 Alta
-      2 - .50 Baja
-      3 - .50 mira op / version rusa
-      4 - AT
-      5 - ATGM
-      6 - Mortero
-      */
       if (side player isequalto east) then { [] call clv_fnc_TM_HMred};
       if (side player isequalto west) then { [] call clv_fnc_TM_HMblue};
       hint "WIP | ARMAMENTO PESADO";
     };
 
     case 3: { // FOB
-      /*
-      Menu de 3 con :
-      1 - FOB   | Falta logo
-      2 - RALLY |  Falta logo
-      3 - nada
-      */
-      [] call clv_fnc_TM_fobs;
-      hint "WIN  | FOB de respawn";
-
+      [] call clv_fnc_fob_crearFob;
     };
 };
 

@@ -18,7 +18,7 @@
    true
 */
 
-params[["_counter",10]];
+params[["_counter",20]];
 
 with uiNamespace do {
     my_awesome_progressBar = findDisplay 46 ctrlCreate ["RscProgress", -1];
@@ -29,7 +29,7 @@ with uiNamespace do {
 
 for "_i" from 1 to (_counter*10) do {
     (uiNamespace getVariable "my_awesome_progressBar") progressSetPosition (1-_i/_counter);
-    sleep 0.1;
+    sleep 1;
 };
 
 ctrlDelete (uiNamespace getVariable "my_awesome_progressBar");

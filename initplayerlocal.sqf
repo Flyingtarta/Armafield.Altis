@@ -1,5 +1,6 @@
-contruyendo = false;
-
+construyendo = false;
+//tab = 58
+//blockmayus = 15
 
 (findDisplay 46) displayRemoveAllEventHandlers "KeyDown"; //debug para sacar todos los EH
 sleep 1;
@@ -7,6 +8,10 @@ _keydown = findDisplay 46 displayAddEventHandler ["KeyDown", {
     private _key = _this select 1;
     if (_key isequalto 20) then { // T
       _this spawn clv_fnc_TM_abrirMenuConstruccion;
+    };
+
+    if (_key isequalto 58) then {//TAB
+      (getCursorObjectParams) call CLV_fnc_TM_interact;
     };
   }];
 

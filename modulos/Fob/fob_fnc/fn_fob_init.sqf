@@ -5,6 +5,9 @@
 			- Verifica que no haya enemigos cerca
 			- Le pone el addaction al enemigo para destruirlo (pvp)
 			- Descuenta los materiales al camion
+      - Agrega la opcion de cargar los materiales al fob
+      - Agrega handler de HUD
+
 	Author:
 		[calaveras ] FlyingTarta
 
@@ -17,5 +20,3 @@
 	Return:
 		none
 */
-
-hint "Fob despegado";

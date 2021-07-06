@@ -8,29 +8,34 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=12;
+		nextID=22;
+	};
+	class MarkerIDProvider
+	{
+		nextID=3;
 	};
 	class Camera
 	{
-		pos[]={7842.8618,271.46069,16660.012};
-		dir[]={0.73082811,-0.68255967,-0.0016284692};
-		up[]={0.68255794,0.73082983,-0.0015209111};
-		aside[]={-0.0022282465,0,-0.9999975};
+		pos[]={8704.5811,339.20102,18297.219};
+		dir[]={-0.30454975,-0.68291461,0.66399664};
+		up[]={-0.28470871,0.73049688,0.62073791};
+		aside[]={0.90895659,-3.8096914e-007,0.41690451};
 	};
 };
 binarizationWanted=0;
-sourceName="Armafield";
+sourceName="armafield";
 addons[]=
 {
 	"A3_Characters_F",
 	"A3_Soft_F_Gamma_Truck_01",
-	"A3_Soft_F_Exp_Truck_01"
+	"A3_Soft_F_Exp_Truck_01",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -52,12 +57,79 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item3
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=14410853;
 class ScenarioData
 {
 	author="FlyingTarta";
+	respawn=3;
+	respawnDelay=10.510403;
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=2;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuPosition";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
@@ -81,7 +153,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2;
+		items=6;
 		class Item0
 		{
 			dataType="Group";
@@ -94,8 +166,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7855.7017,252.31316,16655.906};
-						angles[]={6.1756024,1.0559295,6.2206011};
+						position[]={7874.0151,251.95816,16671.613};
+						angles[]={6.2631893,5.0535345,6.1663852};
 					};
 					side="West";
 					flags=6;
@@ -128,6 +200,57 @@ class Mission
 			};
 			id=1;
 			type="B_Truck_01_box_F";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8587.1787,172.96397,18469.879};
+				angles[]={0.0039967569,1.0559242,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this setVariable [""municion"",1500];" \n "this setVariable [""materiales"",2000];";
+			};
+			id=18;
+			type="B_Truck_01_box_F";
+		};
+		class Item3
+		{
+			dataType="Marker";
+			position[]={8587.1514,170.64,18472.957};
+			name="marker_0";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=50;
+			b=50;
+			id=19;
+		};
+		class Item4
+		{
+			dataType="Marker";
+			position[]={7858.396,253.16606,16673.557};
+			name="marker_1";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=50;
+			b=50;
+			id=20;
+		};
+		class Item5
+		{
+			dataType="Marker";
+			position[]={8937.3711,140.69901,16755.666};
+			name="respawn_west";
+			markerType="RECTANGLE";
+			type="rectangle";
+			a=50;
+			b=50;
+			id=21;
+			atlOffset=-0.00048828125;
 		};
 	};
 };
