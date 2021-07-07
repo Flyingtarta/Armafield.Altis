@@ -21,6 +21,6 @@ private _objeto = _this select 1;
 if (_tecla > 0) then {
 	_objeto setdir (( (getdir _objeto) - (getdir (attachedTo _objeto))) + 10);
 }else{
-	_objeto setdir ( ( (getdir _objeto) - (getdir (attachedTo _objeto))) - 10);;
+	_objeto setdir ( ( (getdir _objeto) - (getdir (attachedTo _objeto))) - 10);
 };
-false
+true
